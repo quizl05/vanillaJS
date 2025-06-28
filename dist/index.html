@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/fonts.css">
+    <link rel="stylesheet" href="src/style.css">
+<script defer src="bundle.js"></script></head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <div class="nav__bar">
+            <h1>Create your own card</h1>
+        </div>
+        <ul class="side__bar">
+            <li class="side__bar_title">Libraries used:
+                <ul>
+                    <li><a href="https://html2canvas.hertzen.com/" target="_blank">html2canvas</a></li>
+                </ul>
+            </li>
+            <li class="side__bar_title">Author links:
+                <ul>
+                    <li>LinkedIn[blank]</li>
+                    <li><a href="https://github.com/quizl05" target="_blank">Github</a></li>
+                </ul>
+            </li>
+            <li class="side__bar_title">Font changer<br>(works on <br>whole page)
+                <ul class="fonts_list">
+                    <li class="current-font">"Special Gothic Expanded One"</li>
+                    <li>"Roboto Mono"</li>
+                    <li>"Tagesschrift"</li>
+                    <li>"Poppins"</li>
+                </ul>
+            </li>
+        </ul>
+        <div id="hamburger__menu">
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+        </div>
+        <div class="divider"></div>
+    </header>
+    <section class="about">
+        <h2 class="about__title">What you can do..</h2> 
+        <div class="slider">
+            <div class="prev">
+                <img src="icons/back-button.png" alt="arrow_left">
+            </div>
+            <div class="slider__container">
+                <div class="slider__track">
+                    <div class="slide">Upload your info about yourself in form</div>
+                    <div class="slide">Generate</div>
+                    <div class="slide">Print and enjoy!</div>
+                </div>
+            </div>
+            <div class="next">
+                <img src="icons/next-button.png" alt="arrow_right">
+            </div>
+        </div>
+    </section>
+    <section class="form__generator">
+        <div class="form__container">
+            <form id="form">
+            <div class="avatar">
+                <div class="avatar_border">
+                    <img class="avatar_img" src="" alt="">
+                </div>
+                <label class="file-upload" for="avatar__input">
+                Upload image
+                </label>
+                <input type="file" id="avatar__input" accept="image/*" required>
+            </div>
+            </form>
+            <div class="user__fullname">
+                <p class="transformed-name"></p>
+                <input type="text" id="input_fullname" placeholder="Sam Smith" required>
+                <button class="get_fullname">Upload Full Name</button>
+                <button class="reset-button">Reset Name</button>
+            </div>
+            <div class="address">
+                <form id="address__form">
+                    <div class="country_block address_result">Country: <p class="country"></p></div>            
+                    <div class="city_block address_result">City: <p class="city"></p></div> 
+                    <div class="postcode_block address_result">Postcode: <p class="postcode"></p></div>
+                    <input type="text" id="countryInput" placeholder="Input your country(optional)">
+                    <input type="text" id="cityInput" placeholder="Input your city(optional)">
+                    <input type="text" id="postcodeInput" placeholder="Input your postcode(optional)">
+                    <button type="submit" class="submit-address">Upload info</button>
+                    <button type="reset" class="reset-address">Reset info</button>
+                    <p class="address_error_caught">Fill all gaps</p>
+                </form>
+            </div>
+            <div class="info_pole">
+                <p class="label_info">Write about ur self:</p>
+                <p class="transformed_info"></p>
+                <textarea id="form_info" maxlength="750" autofocus required placeholder="Your info here..(min 50 bytes)"></textarea>
+                <div class="generate_info_flex">    
+                    <button class="hidden generate_info">Generate Info</button>
+                    <button class="hidden refresh_info">Refresh Info</button>
+                    <button class="generate__full_form">Generate Full Form</button>
+                    <div class="bytes_amount">Current bytes:<p class="current">0</p>&nbsp;&nbsp;/ &nbsp;&nbsp;Max bytes:<p class="maxlength">2312</p></div>
+                </div>
+            </div>
+            <div class="card-color">
+                <p class="card-color-label">Change card color:</p>
+                <div class="item-color selected-color" id="green-blue"></div>
+                <div class="item-color" id="black-blue"></div>
+                <div class="item-color" id="pink-purple"></div>
+                <div class="item-color" id="orange-yellow"></div>
+            </div>
+        </div>
+        <button class="print"></button>
+    </section>
+
+
+    <script defer src="dist/bundle.js"></script>
+</body>
+</html>
